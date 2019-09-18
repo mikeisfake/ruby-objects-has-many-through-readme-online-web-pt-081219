@@ -39,14 +39,5 @@ class Waiter
     
     worst_tipped_meal.customer 
   end 
-  
-  def experienced_tip
-    
-    most_exp_waiter = self.all.max_by{|exp| Meal.all.tip }
-    binding.pry
-    most_exp_waiter
-    
-  end 
-
 
 end
