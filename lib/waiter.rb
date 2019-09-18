@@ -27,6 +27,7 @@ class Waiter
   def best_tipper
     best_tipped_meal = meals.max do |meal_a, meal_b|
       meal_a.tip <=> meal_b.tip 
+      binding.pry
     end 
     
   end 
@@ -41,7 +42,6 @@ class Waiter
   
   def experienced_tip
     most_exp_waiter = self.all.max_by{|exp| Meal.all.tip }
-    binding.pry
     most_exp_waiter
     
   end 
